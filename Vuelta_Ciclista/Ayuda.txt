@@ -1,0 +1,49 @@
+VERSIONES
+---------
+Este programa está realizado con:
+IDE ----> ECLIPSE MARS.2
+SGBD ---> POSTGRESQL
+SO -----> UBUNTU 14.04
+
+PANTALLAS Y BOTONES PRINCIPALES
+-------------------------------
+- El programa está preparado para una carrera de:
+	- 5 etapas:
+		- 1 crono individual
+		- 1 crono por equipos
+		- 3 etapas en línea
+	- 3 equipos:
+		- 3 corredores de Sky
+		- 3 corredores de Movistar
+		- 3 corredores de Astana
+	- 3 puertos de montaña:
+		- 1 puerto en la etapa 2
+		- 2 puertos en la etapa 4
+
+- La pantalla principal consta de 4 botones:
+	- INSCRIPCIONES:
+		- Aquí se inscribirá, modificará y borrará a los participantes y se podrán consultar sus datos.
+	- ETAPAS:
+		- Aquí se podrán consultar los datos de las distintas etapas.
+	- REGISTROS
+		- Aquí se registrarán los tiempos de cada ciclista en cada etapa y puerto.
+		- Para facilitar la labor, simulamos que se ha generado un script con los tiempos que registra el chip de cada dorsal.
+		- Con lo cual, al pulsar el botón de cada etapa, ejecutamos el script correspondiente y registrando los datos automáticamente.
+	- CLASIFICACIONES
+		- Aquí se podrán consultar las clasificaciones por categorías. Tanto provisionalmente como definitivas, una vez que se hayan 
+		  registrado todos los tiempos por etapa.
+
+FUNCIONAMIENTO
+--------------
+
+- Antes de ejecutar el programa se debe ejecutar el script "carrera.sql". En él se crea la base de datos con las tablas correspondientes
+  y algunos registros. Para simplificar la corrección, se insertan por defecto 7 participantes
+  (los 2 restantes se deberán insertar a mano). Tanto los existentes como los nuevos a insertar se pueden modificar, borrar y volver a 
+  insertar nuevos.
+
+- Los botones REGISTROS y CLASIFICACIONES de la pantalla principal están desactivados hasta que no dé comienzo la carrera.
+
+- Para dar comienzo a la carrera se debe pulsar el botón FINALIZAR  de la pantalla INSCRIPCIONES. Una vez pulsado este botón no se podrá   
+  inscribir, modificar o borrar ningún participante. LA ORGANIZACIÓN NO COMENZARÁ LA CARRERA SI NO EXISTEN 9 PARTICIPANTES. Si hay menos dará error, ya que los scripts de registro de tiempos están preparados para una carrera de 9 corredores.
+
+- Una vez dé comienzo la carrera se activarán los botones REGISTROS y CLASIFICACIONES y se podrán volcar los datos de cada etapa
